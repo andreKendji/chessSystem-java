@@ -13,6 +13,11 @@ public class UI {
 	public static final String ANSI_RESET = "\u001B[0m";
 	public static final String ANSI_YELLOW = "\u001B[33m";
 	public static final String ANSI_WHITE = "\u001B[37m";
+	
+	public static void cleanScreen() {
+		System.out.print("\033[H\033\23");
+		System.out.flush();
+	}
 
 	public static ChessPosition readChessPosition(Scanner sc) {
 		try {
